@@ -73,3 +73,5 @@ Route::get('hello', 'HomeController@showWelcome');
 
 Route::get('loginx', 'LoginController@showLogin');
 Route::post('loginx', 'LoginController@processLogin');
+
+Route::get('profile', array('before'=>'auth', 'uses'=>'UserController@showProfile'));
